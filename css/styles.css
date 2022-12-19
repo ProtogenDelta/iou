@@ -1,0 +1,103 @@
+/* ---------- Text Styles ---------- */
+:root {
+	font-family: "Inter",sans-serif;
+	color: white;
+}
+
+.subtitle {
+	color: #AAA;
+}
+
+body {
+	background-color: #333;
+}
+
+kbd {
+	background-color: #222;
+	color: orangered;
+	border-radius: 3px;
+	font-family: monospace;
+	font-weight: bold;
+	padding: 1px 3px;
+}
+
+a {
+	white-space: nowrap;
+	color: #07f;
+}
+
+a:visited {
+	color: #f0f;
+}
+
+/* ---------- Styles ---------- */
+.hidden {
+	display: none;
+}
+
+/* ---------- Main ---------- */
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.main-content {
+	width: 100%;
+	max-width: 30em;
+	background-color: #555;
+	border-radius: 1em;
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.main-content p {
+	margin-top: 0;
+}
+
+.main-content img {
+	width: 10em;
+}
+
+/* ---------- Header ---------- */
+header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+header * {
+	font-weight: 200; /* ExtraLight */
+}
+
+/* ---------- Footer ---------- */
+footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ---------- Create ---------- */
+
+td {
+	text-align: left;
+	display: flex;
+}
+
+td input {
+	flex: 3;
+}
+
+td button, td input[type="checkbox"] {
+	flex: 1;
+}
+
+th {
+	padding-right: 0.5em;
+	text-align: right;
+}

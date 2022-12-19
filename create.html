@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hashids/2.2.10/hashids.min.js" integrity="sha512-c2uJyl0yoZaILXV5QC5s78uT8gQrd0MbmH3t1fXZ7j/2WfC+KJwglzdjVaYVJtfG9k3NTokOR016aP13vWwiiw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<title>Create an IOU</title>
+</head>
+<body>
+	<header>
+			<h1 class="title">// IOU&nbsp;</h1>
+			<h3 class="subtitle">by Delta</h3>
+	</header>
+	<main>
+		<section class="main-content">
+			<noscript>
+				<img src="svg/no_entry.svg" alt="No Entry Emoji">
+				<h1>Whoops!</h1>
+				<p>
+					This site needs JavaScript to function properly.<br/><br/>
+					Learn how to enable it <a href="https://www.enable-javascript.com/">here</a>.
+				</p>
+			</noscript>
+			<div id="main-body" class="hidden">
+				<img src="svg/wrench.svg" alt="Wrench Emoji">
+				<h1>Create an IOU</h1>
+				<table>
+					<tr>
+						<th>ID</th>
+						<td>
+							<input type="text" name="id" id="iou-id" readonly>
+							<button onclick="regenID()">Regenerate</button>
+						</td>
+					</tr>
+					<tr>
+						<th>Key</th>
+						<td>
+							<input type="text" name="key" id="iou-key" readonly>
+							<button onclick="regenKey()">Regenerate</button>
+						</td>
+					</tr>
+					<form id="iou-form" action="POST">
+						<tr>
+							<th>For</th>
+							<td>
+								<input type="text" name="name" id="iou-for" required>
+							</td>
+						</tr>
+						<tr>
+							<th>Subject</th>
+							<td>
+								<select name="prefix" id="iou-subject-prefix">
+									<option value="" selected>-</option>
+									<option value="a">a</option>
+									<option value="an">an</option>
+								</select>
+								<input type="text" name="subject" id="iou-subject" required>
+							</td>
+						</tr>
+						<tr>
+							<th>Message</th>
+							<td>
+								<textarea name="message" id="iou-message" cols="35" rows="3" required></textarea>
+							</td>
+						</tr>
+						<tr>
+							<th>Due</th>
+							<td>
+								<input type="checkbox" name="has-due" id="iou-has-due" onclick="toggleHasDue()">
+								<input type="date" name="due" id="iou-due" disabled>
+							</td>
+						</tr>
+					</form>
+					<tr>
+						<th>&nbsp;</th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>Link</th>
+						<td>
+							<input type="text" name="link" id="iou-link" readonly>
+							<button onclick="copyLink()">Copy</button>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<button onclick="downloadIOU()">Download</button>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<p class="has-text-grey-light">
+			<a href="/notice.txt">Notice</a>
+			<span>&nbsp;|&nbsp;</span>
+			<span class="subtitle">Made with ❤️ by <a href="https://github.com/ProtogenDelta">ProtogenDelta</a></span>
+		</p>
+	</footer>
+	<a href="#" id="dl" class="hidden"></a>
+	<script src="js/create.js"></script>
+</body>
+</html>

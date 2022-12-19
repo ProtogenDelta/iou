@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>IOU</title>
+</head>
+<body>
+	<header>
+			<h1 class="title">// IOU&nbsp;</h1>
+			<h3 class="subtitle">by Delta</h3>
+	</header>
+	<main>
+		<section class="main-content">
+			<noscript>
+				<img src="svg/no_entry.svg" alt="No Entry Emoji">
+				<h1>Whoops!</h1>
+				<p>
+					This site needs JavaScript to function properly.<br/><br/>
+					Learn how to enable it <a href="https://www.enable-javascript.com/">here</a>.
+				</p>
+			</noscript>
+			<div id="explainer" class="hidden">
+				<img src="svg/wave_paw_k2.svg" alt="Paw Waving Emoji">
+				<h1>Welcome!</h1>
+				<p>
+					I made this site to securely share promises.
+				</p>
+				<p>
+					More specifically, I made it to hold myself accountable to do
+					the things I said I would.
+				</p>
+				<p>
+					If you've recieved a link to this page that doesnt have a <kbd>#</kbd>,
+					then you were probably sent this by mistake.
+				</p>
+				<p>
+					All content stored on this site is <a href="https://blog.excalidraw.com/end-to-end-encryption/">end-to-end encrypted</a>.
+				</p>
+			</div>
+			<div id="error" class="hidden">
+				<img src="svg/thinking.svg" alt="Thinking Emoji">
+				<h1>Well, this is embarrassing...</h1>
+				<p>
+					Something went wrong while loading this page.<br/><br/>
+					If you were expecting to see something else here, please <a href="/">let me know</a>.
+				</p>
+			</div>
+			<div id="iou" class="hidden">
+				<img src="svg/tada.svg" alt="Tada - Party Popper Emoji">
+				<h1>Dear <span id="name">{{name}}</span>,</h1>
+				<h3>I owe you <span id="subject">{{subject}}</span>.</h3>
+				<p id="message">{{message}}</p>
+				<em id="due-outer" class="hidden">Due before <b id="due">{{due}}</b></em>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<p class="has-text-grey-light">
+			<a href="/notice.txt">Notice</a>
+			<span>&nbsp;|&nbsp;</span>
+			<span class="subtitle">Made with ❤️ by <a href="https://github.com/ProtogenDelta">ProtogenDelta</a></span>
+		</p>
+	</footer>
+	<script src="js/index.js"></script>
+</body>
+</html>
